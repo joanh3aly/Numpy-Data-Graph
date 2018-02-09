@@ -31,7 +31,7 @@ def dataProcess(hourArray,CSVdata,hourNumber):
     return (hourRecorded, tweetCount)
 
 def read_data():	
-    CSV_data = genfromtxt('/Applications/MAMP/htdocs/social_test/twitter/network-map/station-tweet-data/cj3-20150611-18.data', delimiter='\t',autostrip=True)
+    CSV_data = genfromtxt('/twitter/network-map/station-tweet-data/cj3-20150611-18.data', delimiter='\t',autostrip=True)
     hourRecorded1, tweetCount1 = dataProcess("one",CSV_data,1)
     hourRecorded2, tweetCount2 = dataProcess("two",CSV_data,2) 
     hourRecorded3, tweetCount3 = dataProcess("three",CSV_data,3)
@@ -65,7 +65,7 @@ def plotter(NPtweetsperhour):
     plt.xlabel('hour', fontsize=18)
     plt.ylabel('tweet-volume', fontsize=18)
     plt.show()
-    plt.savefig('/Applications/MAMP/htdocs/social_test/twitter/network-map/out.png')   	
+    plt.savefig('/twitter/network-map/out.png')   	
     return True
    
 if __name__ == '__main__':  
